@@ -1,6 +1,7 @@
 import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
-import router from "../router/route";
+import router from "./router/route";
+
 dotenv.config();
 
 const app: Express = express();
@@ -17,3 +18,5 @@ app.use("/template", router);
 app.listen(port, () => {
   console.log(`[server]: Server is running at http://localhost:${port}`);
 });
+
+export default app;
